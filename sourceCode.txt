@@ -1,0 +1,21 @@
+=' 0 0
+checkpoint helloLoop1
+    print-text "Hello, World! -> ("
+    +' 0 1
+    print-reg 0
+    print-text ")\n"
+    <=' 0 4 helloLoop1
+
+print-text "END OF HELLO LOOP 1\n"
+
+=' 0 0
+=' 1 3
+= 2 1
+checkpoint helloLoop2
+    print-text "Hello, World 2! -> ("
+    +' 0 1
+    print-reg 0
+    print-text ")\n"
+    <= 0 2 helloLoop2
+
+print-text "END OF HELLO LOOP 2\n"

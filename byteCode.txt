@@ -1,0 +1,18 @@
+70 0
+0helloLoop1
+1"Hello, World! -> ("
+80 1
+K0
+1")\n"
+G0 4 helloLoop1
+1"END OF HELLO LOOP 1\n"
+70 0
+71 3
+22 1
+0helloLoop2
+1"Hello, World 2! -> ("
+80 1
+K0
+1")\n"
+A0 2 helloLoop2
+1"END OF HELLO LOOP 2\n"
