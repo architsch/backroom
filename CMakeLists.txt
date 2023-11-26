@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.6)
 project(backroom CXX C)
 set(CMAKE_CXX_STANDARD 17)
 
-set(CMAKE_MODULE_PATH "/opt/homebrew/Cellar")
-
 message(STATUS "####################################################")
 message(STATUS "PROJECT_NAME = ${PROJECT_NAME}")
 message(STATUS "PROJECT_SOURCE_DIR = ${PROJECT_SOURCE_DIR}")
