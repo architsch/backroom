@@ -1,18 +1,22 @@
-70 0
-0helloLoop1
-1"Hello, World! -> ("
-80 1
-K0
-1")\n"
-G0 4 helloLoop1
-1"END OF HELLO LOOP 1\n"
-70 0
-71 3
-22 1
-0helloLoop2
-1"Hello, World 2! -> ("
-80 1
-K0
-1")\n"
-A0 2 helloLoop2
-1"END OF HELLO LOOP 2\n"
+80 0
+0loop1_begin
+F0 4 loop1_end
+2"Loop 1 -> ("
+L0
+2")\n"
+90 1
+1loop1_begin
+0loop1_end
+2"END OF LOOP 1\n"
+80 0
+81 3
+32 1
+0loop2_begin
+@0 2 loop2_end
+2"Loop 2 -> ("
+L0
+2")\n"
+90 1
+1loop2_begin
+0loop2_end
+2"END OF LOOP 2\n"

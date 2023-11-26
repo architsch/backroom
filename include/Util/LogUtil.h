@@ -18,10 +18,14 @@ namespace LogUtil
         ERROR,
         CORE,
         INST_TYPE_CHAR_INIT,
-        BYTE_CODE_PARSE,
+        BYTE_CODE_PREPROCESS,
+        BYTE_CODE_RUN,
+        REG_STATE,
+        CHECKPOINT_ADD,
         STRING_PARSE,
     };
 
+    bool isLogTypeEnabled(LogType logType);
     void setLogTypeEnabled(LogType logType, bool enabled);
     void log(string str, vector<LogParam> logParams, LogType logType);
     void error(string str, vector<LogParam> logParams);

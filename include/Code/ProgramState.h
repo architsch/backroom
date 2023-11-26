@@ -3,15 +3,15 @@
 #include <vector>
 #include <set>
 #include <stack>
+#include <string>
 
 using namespace std;
-
-#define PROGRAM_STATE_REG_SIZE 1024
 
 struct ProgramState {
     int instIndex = 0;
     int goto_pending_instIndex = 0;
-    int reg[PROGRAM_STATE_REG_SIZE];
+    int reg[1024];
+    int regSize = 1024;
     stack<int> stack;
     unordered_map<string, int> checkpointByName;
     string paramStr;

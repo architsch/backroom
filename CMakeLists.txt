@@ -14,6 +14,7 @@ message(STATUS "####################################################")
 
 add_library(Code STATIC
     ${PROJECT_SOURCE_DIR}/src/Code/ByteCode.cpp
+    ${PROJECT_SOURCE_DIR}/src/Code/ProgramStateDebug.cpp
     ${PROJECT_SOURCE_DIR}/src/Code/SourceCode.cpp
     ${PROJECT_SOURCE_DIR}/src/Interpreter/Interpreters.cpp
 )

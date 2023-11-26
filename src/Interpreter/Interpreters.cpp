@@ -1,5 +1,6 @@
 #include "Interpreters.h"
 #include "Interpreter_Checkpoint.h"
+#include "Interpreter_Goto.h"
 #include "Interpreter_PrintText.h"
 #include "InterpreterBinaryRegOps.h"
 #include "InterpreterBinaryRegCondOps.h"
@@ -9,7 +10,8 @@
 
 vector<string> interpreterNames {
     // Standalone
-    "checkpoint",
+    ":",
+    "goto",
     "print-text",
 
     // InterpreterBinaryRegOps
@@ -52,6 +54,7 @@ vector<string> interpreterNames {
 vector<interpreter_func_t> interpreters {
     // Standalone
     Interpreter_Checkpoint,
+    Interpreter_Goto,
     Interpreter_PrintText,
 
     // InterpreterBinaryRegOps

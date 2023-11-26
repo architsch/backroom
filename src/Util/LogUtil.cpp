@@ -4,7 +4,10 @@ unordered_map<LogUtil::LogType, bool> logEnabled = {
     {LogUtil::LogType::ERROR, true},
     {LogUtil::LogType::CORE, true},
     {LogUtil::LogType::INST_TYPE_CHAR_INIT, false},
-    {LogUtil::LogType::BYTE_CODE_PARSE, true},
+    {LogUtil::LogType::BYTE_CODE_PREPROCESS, false},
+    {LogUtil::LogType::BYTE_CODE_RUN, true},
+    {LogUtil::LogType::REG_STATE, true},
+    {LogUtil::LogType::CHECKPOINT_ADD, false},
     {LogUtil::LogType::STRING_PARSE, false},
 };
 
@@ -29,6 +32,11 @@ void logProcedure(string msg, vector<LogUtil::LogParam> logParams, string outStr
     }
 
     outStream << "\033[0m" << endl;
+}
+
+bool LogUtil::isLogTypeEnabled(LogType logType)
+{
+    return logEnabled[logType];
 }
 
 void LogUtil::setLogTypeEnabled(LogType logType, bool enabled)

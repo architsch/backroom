@@ -11,7 +11,7 @@ int InterpreterRegIndexQuery(ProgramState* state)
         return 0;
     }
     int regIndex = stoi(regIndexStr);
-    if (regIndex < 0 || regIndex >= PROGRAM_STATE_REG_SIZE)
+    if (regIndex < 0 || regIndex >= state->regSize)
     {
         LogUtil::error("regIndex is out of bound.", {{"regIndex", to_string(regIndex)}});
         return 0;
